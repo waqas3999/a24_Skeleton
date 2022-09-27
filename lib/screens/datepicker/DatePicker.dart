@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:a24_skeleton/screens/chooseteam/choose_team.dart';
+import 'package:a24_skeleton/screens/menu_screen/menu_screen.dart';
 import 'package:a24_skeleton/screens/signup/signup_widgets/combine_textfield_d.dart';
 import 'package:a24_skeleton/screens/signup/signup_widgets/customappbar2.dart';
 import 'package:a24_skeleton/screens/utils/utils.dart';
@@ -27,14 +27,14 @@ class _DAtePickerState extends State<DAtePicker> {
         trailing_icon: "images/arrow_right.png",
         ontrailingClick: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (_) => ChooseTeam()));
+              context, MaterialPageRoute(builder: (_) => MenuScreen()));
         },
         traling_iconcolor: 0xFF000000,
         bg_color: 0xFFFFFFFF,
         trailingText: 'الرجوع',
       ),
       body: Padding(
-        padding: EdgeInsets.only(left: 10, right: 10),
+        padding: EdgeInsets.only(top: 10, left: 10, right: 10),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -161,8 +161,9 @@ class _DAtePickerState extends State<DAtePicker> {
       children: <Widget>[
         CircleAvatar(
           radius: 40,
+          //*profile.PNG*/
           backgroundImage: _imagefile == null
-              ? AssetImage("images/profile.PNG") as ImageProvider
+              ? AssetImage("images/beard.png") as ImageProvider
               : FileImage(File(_imagefile!.path)),
         ),
         Positioned(

@@ -3,7 +3,7 @@ import 'package:a24_skeleton/screens/base_landing/custom_appbar.dart';
 import 'package:a24_skeleton/screens/sign_in/signin_widget/appbutton.dart';
 import 'package:a24_skeleton/screens/sign_in/signin_widget/combine_textfield.dart';
 import 'package:a24_skeleton/screens/sign_in/signin_widget/signin_btn.dart';
-import 'package:a24_skeleton/screens/signup/signup1.dart';
+import 'package:a24_skeleton/screens/signup/signup.dart';
 import 'package:a24_skeleton/screens/utils/utils.dart';
 import 'package:flutter/material.dart';
 
@@ -24,10 +24,11 @@ class _SignInState extends State<SignIn> {
       appBar: CustomAppBar(
         trailing_icon: "images/arrow_right.png",
         traling_iconcolor: 0xFF000000,
-        center_icon: "images/login.PNG",
+        center_icon: "images/a24_logo_white.png",
+        center_icon_color: 0xFF000000,
         ontrailingClick: null,
-        bg_color: 0xFFFFFFFF,
         leading_iconcolor: 0xFF000000,
+        bg_color: 0xFFFFFFFF,
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 10, right: 10, top: 20),
@@ -76,10 +77,10 @@ class _SignInState extends State<SignIn> {
               AppButton(
                   label: "تسجيل الدخول",
                   textColor: 0xffF1F1F1,
-                  buttoncolor: 0xFF0000FF,
+                  buttoncolor: 0xFF777777,
                   onPress: () {
                     Navigator.of(context)
-                        .push(MaterialPageRoute(builder: (_) => Signup1()));
+                        .push(MaterialPageRoute(builder: (_) => Signup2()));
                   }),
               const SizedBox(
                 height: 10,
